@@ -282,6 +282,7 @@
 .Hauptteil .content .Artikel{
     font-size: 1.03em;
     padding-top: 10px;
+    padding:2em;
     /*
     border-top: solid; */
     max-width: 1000%;
