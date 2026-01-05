@@ -4,6 +4,6 @@ async function loadHTML(id, file) {
   document.getElementById(id).innerHTML = text;
 }
 
-loadHTML("header", "homepage-programm/layout/header.html");
-loadHTML("footer", "homepage-programm/layout/footer.html");
-loadHTML("sidebar", "homepage-programm/layout/sidebar.html");
+loadHTML("header", "layout/header.html");
+loadHTML("footer", "layout/footer.html");
+loadHTML("sidebar", "layout/sidebar.html");
