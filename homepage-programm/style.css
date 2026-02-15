@@ -69,7 +69,7 @@ html, body {
     text-decoration: none;
     color: #000;
     position: relative;
-    transition: background-color 0.3s ease, color 0.3s ease;
+    transition: transform 0.3s, background-color 0.3s, color 0.3s;
 }
 
 .card-main {
@@ -84,6 +84,9 @@ html, body {
     background-color: #b40808;
     color: #fff;
     text-decoration: none;
+    transform: translateY(-0.2vw);
+    box-shadow: 0 0.33vw 1vw rgba(0,0,0,0.35); 
+    transition: transform 0.25s ease-in-out;
 }
 
 .nav-icon {
