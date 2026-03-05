@@ -29,7 +29,22 @@
                         </p>
                         <p class="Mannschaft-fuehrer">
                             <span class="Mannschaft-fuehrer-label">Mannschaftsführer:</span>
-                            Antal Mimkes
+                            <span class="contact-name" onclick="openContact('contact1')">
+                                Antal Mimkes
+                            </span>
+                            
+                            <div id="contact1" class="contact-popup">
+                                <div class="contact-box">
+                                    <span class="close" onclick="closeContact('contact1')">&times;</span>
+                                    <h3>Antal Mimkes</h3>
+                                    <p>
+                                    📞 <a href="tel:+4915231791848">+49 152 31791848</a>
+                                    </p>
+                                    <p>
+                                    ✉️ <a href="mailto:mimkesantal@gmail.com">mimkesantal@gmail.com</a>
+                                    </p>
+                                </div>
+                            </div>
                         </p>
                     </div>
 
@@ -54,7 +69,22 @@
 
                         <p class="Mannschaft-fuehrer">
                             <span class="Mannschaft-fuehrer-label">Mannschaftsführer:</span>
-                            Oliver Preuß
+                            <span class="contact-name" onclick="openContact('contact2')">
+                                Oliver Preuß
+                            </span>
+                            
+                            <div id="contact2" class="contact-popup">
+                                <div class="contact-box">
+                                    <span class="close" onclick="closeContact('contact2')">&times;</span>
+                                    <h3>Oliver Preuß</h3>
+                                    <p>
+                                    📞 <a href="tel:+491797322549">+49 179 7322549</a>
+                                    </p>
+                                    <p>
+                                    ✉️ <a href="mailto:oliverpreuss@endoryan.de">oliverpreuss@endoryan.de</a>
+                                    </p>
+                                </div>
+                            </div>
                         </p>
                     </div>
 
@@ -78,7 +108,22 @@
 
                         <p class="Mannschaft-fuehrer">
                             <span class="Mannschaft-fuehrer-label">Mannschaftsführer:</span>
-                            Mike Kanbach
+                            <span class="contact-name" onclick="openContact('contact3')">
+                                Mike Kanbach
+                            </span>
+                            
+                            <div id="contact3" class="contact-popup">
+                                <div class="contact-box">
+                                    <span class="close" onclick="closeContact('contact3')">&times;</span>
+                                    <h3>Mike Kanbach</h3>
+                                    <p>
+                                    📞 <a href="tel:+491772954968">+49 177 2954968</a>
+                                    </p>
+                                    <p>
+                                    ✉️ <a href="mailto:plesse2@schach-bovenden.de">plesse2@schach-bovenden.de</a>
+                                    </p>
+                                </div>
+                            </div>
                         </p>
                     </div>
 
@@ -114,5 +159,37 @@
     </script>
 
     <script src="layout/layout.js"></script>
+
+    <script>
+        function openContact(id){
+        const popup = document.getElementById(id);
+        popup.style.display = "flex";
+        }
+
+        function closeContact(id){
+        const popup = document.getElementById(id);
+        popup.style.display = "none";
+        }
+
+        /* close with ESC key */
+        document.addEventListener("keydown", function(event){
+        if(event.key === "Escape"){
+            document.querySelectorAll(".contact-popup").forEach(popup=>{
+            popup.style.display="none";
+            });
+        }
+        });
+
+        /* close when clicking outside popup box */
+        document.addEventListener("click", function(event){
+        document.querySelectorAll(".contact-popup").forEach(popup=>{
+            const box = popup.querySelector(".contact-box");
+
+            if(popup.style.display === "flex" && !box.contains(event.target) && !event.target.classList.contains("contact-name")){
+            popup.style.display = "none";
+            }
+        });
+        });
+    </script>
 </body>
 </html>
